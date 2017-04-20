@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5438861ad666f7367e7d9ae0e539b7d0",
+    "content-hash": "7dd1983ff5a6eb322a6f41e077d42522",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -87,17 +87,42 @@
             ]
         },
         {
-            "name": "bower-asset/jquery.inputmask",
-            "version": "3.3.4",
+            "name": "bower-asset/jquery-ui",
+            "version": "1.11.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobinHerbots/Inputmask.git",
-                "reference": "8a882bc471ba4077c4f8ecbe3d9d61c7558f3ef2"
+                "url": "https://github.com/components/jqueryui.git",
+                "reference": "c34f8dbf3ba57b3784b93f26119f436c0e8288e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/8a882bc471ba4077c4f8ecbe3d9d61c7558f3ef2",
-                "reference": "8a882bc471ba4077c4f8ecbe3d9d61c7558f3ef2",
+                "url": "https://api.github.com/repos/components/jqueryui/zipball/c34f8dbf3ba57b3784b93f26119f436c0e8288e1",
+                "reference": "c34f8dbf3ba57b3784b93f26119f436c0e8288e1",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery": ">=1.6"
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "jquery-ui.js"
+                ],
+                "bower-asset-ignore": []
+            }
+        },
+        {
+            "name": "bower-asset/jquery.inputmask",
+            "version": "3.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RobinHerbots/Inputmask.git",
+                "reference": "ed27356d1b22366be48c4e7b8d038b9649bd4ab0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RobinHerbots/Inputmask/zipball/ed27356d1b22366be48c4e7b8d038b9649bd4ab0",
+                "reference": "ed27356d1b22366be48c4e7b8d038b9649bd4ab0",
                 "shasum": ""
             },
             "require": {
@@ -106,24 +131,31 @@
             "type": "bower-asset-library",
             "extra": {
                 "bower-asset-main": [
-                    "./dist/inputmask/inputmask.dependencyLib",
-                    "./dist/inputmask/inputmask",
-                    "./dist/inputmask/inputmask.extensions",
-                    "./dist/inputmask/inputmask.date.extensions",
-                    "./dist/inputmask/inputmask.numeric.extensions",
-                    "./dist/inputmask/inputmask.phone.extensions",
-                    "./dist/inputmask/inputmask.regex.extensions",
-                    "./dist/inputmask/jquery.inputmask"
+                    "./dist/inputmask/inputmask.js",
+                    "./dist/inputmask/inputmask.extensions.js",
+                    "./dist/inputmask/inputmask.date.extensions.js",
+                    "./dist/inputmask/inputmask.numeric.extensions.js",
+                    "./dist/inputmask/inputmask.phone.extensions.js",
+                    "./dist/inputmask/inputmask.regex.extensions.js",
+                    "./dist/inputmask/jquery.inputmask.js",
+                    "./dist/inputmask/global/document.js",
+                    "./dist/inputmask/global/window.js",
+                    "./dist/inputmask/phone-codes/phone.js",
+                    "./dist/inputmask/phone-codes/phone-be.js",
+                    "./dist/inputmask/phone-codes/phone-nl.js",
+                    "./dist/inputmask/phone-codes/phone-ru.js",
+                    "./dist/inputmask/phone-codes/phone-uk.js",
+                    "./dist/inputmask/dependencyLibs/inputmask.dependencyLib.jqlite.js",
+                    "./dist/inputmask/dependencyLibs/inputmask.dependencyLib.jquery.js",
+                    "./dist/inputmask/dependencyLibs/inputmask.dependencyLib.js",
+                    "./dist/inputmask/bindings/inputmask.binding.js"
                 ],
                 "bower-asset-ignore": [
                     "**/*",
                     "!dist/*",
                     "!dist/inputmask/*",
                     "!dist/min/*",
-                    "!dist/min/inputmask/*",
-                    "!extra/bindings/*",
-                    "!extra/dependencyLibs/*",
-                    "!extra/phone-codes/*"
+                    "!dist/min/inputmask/*"
                 ]
             },
             "license": [
@@ -558,6 +590,56 @@
                 "yii2"
             ],
             "time": "2016-12-20T13:26:02+00:00"
+        },
+        {
+            "name": "yiisoft/yii2-jui",
+            "version": "2.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-jui.git",
+                "reference": "843a2160cfe30f5c8b0cb2e9dbd8ee6bcf97e71d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-jui/zipball/843a2160cfe30f5c8b0cb2e9dbd8ee6bcf97e71d",
+                "reference": "843a2160cfe30f5c8b0cb2e9dbd8ee6bcf97e71d",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery-ui": "1.11.*@stable",
+                "yiisoft/yii2": ">=2.0.4"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                },
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\jui\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Qiang Xue",
+                    "email": "qiang.xue@gmail.com"
+                }
+            ],
+            "description": "The Jquery UI extension for the Yii framework",
+            "keywords": [
+                "jQuery UI",
+                "yii2"
+            ],
+            "time": "2016-07-22T22:26:59+00:00"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",

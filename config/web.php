@@ -12,6 +12,7 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'V0n0wbrk',
+            'baseUrl' => '',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -40,14 +41,25 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'enableStrictParsing' => false,
+            /*
+            'suffix' => '.html', //дописываем к нашим url ссылкам на присет .html
             'rules' => [
+                [
+                    'pattern' => '',
+                    'route' => 'site/index',
+                    'suffix' => '',
+                ],
+                '<action:(about|contact|login)>' => 'site/<action>',//конкретные экшены
+                //'<action:\w+>' => 'site/<action>', //любое слово может быть экшеном (a-z, 0-9, _ -)
             ],
+            */
         ],
-        */
+
     ],
     'params' => $params,
 ];
@@ -57,6 +69,7 @@ if (YII_ENV_DEV) {
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
+        'allowedIPs' => ['127.0.0.1', '192.168.5.251'],
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
@@ -64,6 +77,7 @@ if (YII_ENV_DEV) {
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
+        'allowedIPs' => ['127.0.0.1', '192.168.5.251'],
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
     ];

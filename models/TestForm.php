@@ -16,6 +16,12 @@ class TestForm extends Model
     public $email;
     public $text;
 
+
+    public static function tableName(){
+        return 'posts';
+    }
+
+
     public function attributeLabels()
     {
         return [
